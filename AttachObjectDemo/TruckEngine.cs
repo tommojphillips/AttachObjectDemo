@@ -55,7 +55,7 @@ namespace AttachObjectDemo
             this.truckEngine.transform.rotation = new Quaternion(0, 90, 90, 0);
             // Creating trigger for truck engine.
             this.parent = GameObject.Find("SATSUMA(557kg, 248)");
-            Trigger trigger = new Trigger("TruckEngineTrigger", this.parent, new Vector3(0.0f, 1.3f, -0.3f), new Vector3(1f, 1f, 1f));
+            Trigger trigger = new Trigger("TruckEngineTrigger", this.parent, new Vector3(0.0f, 1.3f, -0.3f), new Vector3(1f, 1f, 1f), false);
             // Assigning base properties (ModAPI.Objects.Part) object.
             this.part = this.truckEngine;
             this.makePartPickable(true);
