@@ -41,7 +41,9 @@ namespace AttachObjectDemo
             // Written, 08.08.2018
             // Called once, when mod is loading after game is fully loaded            
 
+            // intializing the assemble/disassemble sounds | REQUIRED
             ModAPI.ModAPI.intializeAssembleSounds();
+            // Initializing a new truck engine.
             this.truckEngine = new TruckEngine(this);
             
             ModConsole.Print(string.Format("{0} v{1}: Loaded.", this.Name, this.Version));
@@ -49,6 +51,7 @@ namespace AttachObjectDemo
 
         public override void Update()
         {
+            // You need to update the truckengine every update. (as of testing)
             this.truckEngine.update(); // Testing
         }
 
